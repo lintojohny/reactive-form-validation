@@ -1,0 +1,73 @@
+<p>
+  reactive-form works!
+</p>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+
+
+
+  <div class="row">
+    <div class="col-md-6 offset-md-2">
+
+        <div class="form-group">
+            <label for="email">Name:</label>
+            <input type="email" formControlName="name" (focus)="onFocus('name')"  class="form-control" id="email">
+
+                <span *ngIf="myForm.controls.name.hasError('setInvalid') " >
+                    Oops, please provide a name!
+                  </span>
+                
+          </div>
+          <div class="form-group">
+              <label for="email">Last Name:</label>
+              <input type="email" formControlName="lastname" (focus)="onFocus('lastname')" class="form-control" id="email">
+              <span *ngIf="myForm.controls.lastname.hasError('setInvalid') " >
+                  Oops, please provide a lastname!
+                </span>
+            
+            </div>
+
+            <div class="form-group">
+                <label for="email">Age:</label>
+                <input type="email" formControlName="age" (focus)="onFocus('age')" class="form-control" id="email">
+                <span *ngIf="myForm.controls.age.hasError('setInvalid') " >
+                    Oops, please provide a age!
+                  </span>
+              </div>
+
+              <div class="form-group">
+                  <label for="email">Country:</label>
+                  <input type="email" formControlName="country" (focus)="onFocus('country')" class="form-control" id="email">
+                  <span *ngIf="myForm.controls.country.hasError('setInvalid') " >
+                      Oops, please provide a country!
+                    </span>
+                </div>
+
+          <div class="form-group">
+              <label for="email">Email address:</label>
+              <input type="email" formControlName="email" (focus)="onFocus('email')" class="form-control" id="email">
+              <span *ngIf="myForm.controls.email.hasError('setInvalid') " >
+                  Oops, please provide a email!
+                </span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Message:</label>
+                <input type="email" formControlName="message" (focus)="onFocus('message')" class="form-control" id="email">
+                <span *ngIf="myForm.controls.message.hasError('setInvalid') " >
+                    Oops, please provide a message!
+                  </span>
+              </div>
+    
+    
+            <div class="checkbox">
+              <label><input type="checkbox"> Remember me</label>
+            </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+    
+    </div>
+  </div>
+  
+
+</form>
+
